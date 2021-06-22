@@ -29,7 +29,7 @@ async function callFetchWithPost(festa){
 
         },
         body :JSON.stringify({
-            {'festa' : festa
+            'festa' : festa
         })
     }
     await fetch(url, options);
