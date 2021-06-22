@@ -14,5 +14,25 @@
         <a href = "javascript:callFetchWithPut(3, 'Subindo o Morro')">Put</a>
         <a href = "javascript:callFetchWithDelete(4)">Delete</a>
         <p id="json"> </p>
+
+        <h2>Formulário Básico (POST)</h2>
+        <form id="postForm">
+            <label for="festa">Festa: </label>
+            <input type="text" id="festa" name="festa"/>
+            <button type="submit" onclick="return submitPost()">Submit</button>
+        </form>
+
+        <h2>Formulário Básico (PUT)</h2>
+        <form id="putForm">
+            <label>Id:<input type="text" name="id"/></label>
+            <label>Festa:<input type="text" name="festa"/></label>
+            <button type="submit" onclick="return submitPut()">Submit</button>
+        </form>
+
+        <h2>Formulário Básico (DELETE)</h2>
+        <form id="deleteForm">
+            <label>Id:<input type="text" name="id"/></label>        
+             <button type="submit" onclick="return submitDelete()">Submit</button>
+        </form>
     </body>
 </html>

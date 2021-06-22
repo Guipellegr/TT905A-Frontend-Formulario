@@ -59,3 +59,25 @@ async function callFetchWithDelete(id){
     }
     await fetch(`${url}${id}`, options);
 }
+
+function submitPost(){
+    const form = document.forms['postForm'];    
+    const festa = form["festa"].value;
+    callFetchWithPost(festa);
+    return false; 
+}
+
+function submitPut(){
+    const form = document.forms['putForm'];    
+    const id = form["id"].value;
+    const festa = form["festa"].value;
+    callFetchWithPut(id, festa);
+    return false; 
+}
+
+function submitDelete(){
+    const form = document.forms['deleteForm'];  
+    const id = form["id"].value;  
+    callFetchWithDelete(id);
+    return false; // Evitar o reload da tela.
+}
