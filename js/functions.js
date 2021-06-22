@@ -35,7 +35,7 @@ async function callFetchWithPost(festa){
 
 async function callFetchWithPut(id, novaFesta){
       const options = {
-        method : 'GET',
+        method : 'PUT',
         mode: 'cors',
         headers: {
             'Accept' : 'application/json',
@@ -48,11 +48,14 @@ async function callFetchWithPut(id, novaFesta){
     await fetch(`${url}${id}`, options);
 }
 
-async function callFetchWithDelete(){
-    let headers = new Headers();
+async function callFetchWithDelete(id){
     const options = {
-        method : 'GET',
+        method : 'DELETE',
         mode: 'cors',
-        headers: headers
+        headers: {
+            'Accept' : 'application/json',
+            'content-type' : 'application/json'
+        }
     }
+    await fetch(`${url}${id}`, options);
 }
