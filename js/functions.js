@@ -30,7 +30,7 @@ async function callFetchWithPost(festa){
             'festa' : festa
         })
     }
-    await fetch](url, options);
+    await fetch(url, options);
 }
 
 async function callFetchWithPut(){
